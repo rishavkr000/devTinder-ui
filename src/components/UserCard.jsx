@@ -2,9 +2,9 @@ const UserCard = ({ user }) => {
   const { firstName, lastName, age, gender, about, skills, profileUrl } = user;
   return (
     <div className="flex justify-center my-10">
-      <div className="card card-side bg-base-300 shadow-sm">
+      <div className="card bg-base-100 w-96 shadow-sm">
         <figure>
-          <img src={profileUrl} alt="Photo" />
+          <img src={profileUrl} alt="Profile Photo" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{firstName + " " + lastName}</h2>

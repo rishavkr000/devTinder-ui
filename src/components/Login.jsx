@@ -33,7 +33,7 @@ const Login = () => {
     <div className="flex justify-center my-10">
       <div className="card card-border bg-base-300 w-96">
         <div className="card-body">
-          <h2 className="card-title">Card Title</h2>
+          <h2 className="card-title justify-center">Login</h2>
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Email ID</legend>
             <input
@@ -46,7 +46,7 @@ const Login = () => {
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Password</legend>
             <input
-              type="text"
+              type="password"
               value={password}
               className="input"
               onChange={(e) => setPassword(e.target.value)}
