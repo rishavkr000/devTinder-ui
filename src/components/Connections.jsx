@@ -22,7 +22,7 @@ const Connection = () => {
     fetchConnections();
   }, []);
 
-  if (!connections) return <h1> No Connection Found </h1>;
+  if (!connections) return;
 
   if (connections.length === 0) return <h1> No Connection Found </h1>;
 

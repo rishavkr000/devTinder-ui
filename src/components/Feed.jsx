@@ -7,7 +7,6 @@ import { useEffect } from "react";
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);
-  console.log(feed);
   const dispatch = useDispatch();
 
   const getFeed = async () => {
@@ -16,7 +15,6 @@ const Feed = () => {
       const feedData = await axios.get(BASE_URL + "/user/feed", {
         withCredentials: true,
       });
-      console.log(feedData.data);
       dispatch(addFeed(feedData?.data));
     } catch (err) {
       console.log(err);
@@ -29,7 +27,7 @@ const Feed = () => {
 
   if(!feed) return;
 
-  if(feed.length <= 0) return <h1 className="text-center mt-10 font-bold"> No new users found </h1>
+  if(feed.length <= 0) return <h1 className="text-center mt-10 font-bold"> We are unable to find any potential matches right now. </h1>
 
   return (
     feed && (

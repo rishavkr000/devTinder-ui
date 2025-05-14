@@ -10,7 +10,6 @@ const UserCard = ({ user }) => {
   const checkConnection = async (status, _id) => {
 
     const res = await axios.post(`${BASE_URL}/request/send/${status}/${_id}`, {}, {withCredentials: true})
-    console.log(res.data.data)
     dispatch(removeFeed(_id))
   }
 
