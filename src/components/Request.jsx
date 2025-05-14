@@ -35,7 +35,7 @@ const Requests = () => {
     }
   }
 
-  if (!requests) return null;
+  if (!requests) return <h1> No Request Found </h1>;
 
   if (requests.length == 0) return <h2> No Request Found </h2>;
 

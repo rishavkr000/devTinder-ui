@@ -50,10 +50,11 @@ const EditProfile = ({ user }) => {
   return (
     <div className="flex justify-center">
       <div className="flex justify-center mx-10 my-10">
-        <div className="card card-border bg-base-300 w-80">
+        <div className="card card-border bg-base-300 w-100">
           <div className="card-body">
             <h2 className="card-title">Profile</h2>
-            <fieldset className="fieldset">
+            <div className="flex justify-between">
+              <fieldset className="fieldset w-42">
               <legend className="fieldset-legend">First Name</legend>
               <input
                 type="text"
@@ -62,7 +63,7 @@ const EditProfile = ({ user }) => {
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </fieldset>
-            <fieldset className="fieldset">
+            <fieldset className="fieldset w-42">
               <legend className="fieldset-legend">Last Name</legend>
               <input
                 type="text"
@@ -71,7 +72,9 @@ const EditProfile = ({ user }) => {
                 onChange={(e) => setLastName(e.target.value)}
               />
             </fieldset>
-            <fieldset className="fieldset">
+            </div>
+            <div className="flex justify-between">
+              <fieldset className="fieldset w-42">
               <legend className="fieldset-legend">Age</legend>
               <input
                 type="text"
@@ -80,7 +83,7 @@ const EditProfile = ({ user }) => {
                 onChange={(e) => setAge(e.target.value)}
               />
             </fieldset>
-            <fieldset className="fieldset">
+            <fieldset className="fieldset w-42">
               <legend className="fieldset-legend">Gender</legend>
               <select
                 className="select select-bordered w-full"
@@ -95,10 +98,11 @@ const EditProfile = ({ user }) => {
                 <option value="other">Other</option>
               </select>
             </fieldset>
+            </div>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">About</legend>
               <textarea
-                className="textarea h-20"
+                className="textarea h-20 w-auto"
                 value={about}
                 onChange={(e) => setAbout(e.target.value)}
               />
@@ -108,7 +112,7 @@ const EditProfile = ({ user }) => {
               <input
                 type="text"
                 value={profileUrl}
-                className="input"
+                className="input w-auto"
                 onChange={(e) => setProfileUrl(e.target.value)}
               />
             </fieldset>

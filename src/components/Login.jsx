@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
@@ -57,6 +57,12 @@ const Login = () => {
             <button className="btn btn-primary" onClick={handleLogin}>
               Login
             </button>
+          </div>
+          <div>
+            <h5 
+              className="text-center">
+                Don't have an account? <Link to="/signup" className="text-blue-500"> Register Now</Link>
+            </h5>
           </div>
         </div>
       </div>
