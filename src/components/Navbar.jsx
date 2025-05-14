@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-blue-500 shadow-sm">
+    <div className="navbar bg-blue-500 shadow-sm sticky top-0">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
           👨‍💻 DevTinder
