@@ -1,5 +1,19 @@
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { BASE_URL } from "../utils/constants";
+import { removeFeed } from "../utils/feedSlice"
+
 const UserCard = ({ user }) => {
-  const { firstName, lastName, age, gender, about, skills, profileUrl } = user;
+  const { _id, firstName, lastName, age, gender, about, skills, profileUrl } = user;
+  const dispatch = useDispatch();
+
+  const checkConnection = async (status, _id) => {
+
+    const res = await axios.post(`${BASE_URL}/request/send/${status}/${_id}`, {}, {withCredentials: true})
+    console.log(res.data.data)
+    dispatch(removeFeed(_id))
+  }
+
   return (
     <div className="flex justify-center my-10">
       <div className="card bg-base-300 w-96 shadow-sm">
@@ -12,8 +26,8 @@ const UserCard = ({ user }) => {
           {about && <p>{about}</p>}
           {/* {skills && skills.length > 0 && <p>{skills.join(", ")}</p>} */}
           <div className="card-actions justify-between">
-            <button className="btn btn-primary">Ignore</button>
-            <button className="btn btn-secondary">Interested</button>
+            <button className="btn btn-primary" onClick={() => checkConnection("ignored", _id)}>Ignore</button>
+            <button className="btn btn-secondary" onClick={() => checkConnection("interested", _id)}>Interested</button>
           </div>
         </div>
       </div>
