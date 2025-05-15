@@ -57,6 +57,9 @@ const Navbar = () => {
                 <Link to="/request">Request</Link>
               </li>
               <li>
+                <Link to="/premium">Premium</Link>
+              </li>
+              <li>
                 <a
                   href="#"
                   onClick={(e) => {

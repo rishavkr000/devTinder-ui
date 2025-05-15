@@ -141,15 +141,15 @@ Body
 
 # Razorpay Payment Gateway Inegration
     - Sign up on Razorpay & complete KYC 
-    - Cerated a UI for premium page
-    - Creating an API for create order in backend
-    - added my key and secret in env file
+    - Created an UI for premium page
+    - Creating an API for 'create order' in backend
+    - added my key and secret in .env file
     - Intialized Razorpay in utils
     - creating order on Razorpay
     - create Schema and model
     - saved the order in payments collection
     - make the API dynamic
-    - Setup RRazorpay webhook on your live APi
+    - Setup Razorpay webhook on your live API
     - Ref - https://github.com/razorpay/razorpay-node/tree/master/documents
     - Ref - https://razorpay.com/docs/payments/server-integration/nodejs/integration-steps/#integrate-with-razorpay-payment-gateway
     - Ref - https://razorpay.com/docs/webhooks/validate-test/
@@ -165,8 +165,8 @@ Body
     - createSocketConnection
     - Listen to events
     - Homework:  improve the UI
-    - Homework: Fix Security Bug - auth in web ockets
-    - Homework: Fix bug - If I'm not fried, then I should not be able to send message
+    - Homework: Fix Security Bug - auth in web sockets
+    - Homework: Fix bug - If I'm not friend, then I should not be able to send message
     - Homework: feat: Show Green Symbol when online???? - [last Seen 2 hours ago]
     - Homework: Limit messages when fetching from DB
     - Project Ideas: Tic tac toe game
