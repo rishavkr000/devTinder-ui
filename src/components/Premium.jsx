@@ -3,7 +3,7 @@ import { BASE_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 
 const Premium = () => {
-  const [isUserPremium, setIsUserPremium] = useState(true);
+  const [isUserPremium, setIsUserPremium] = useState(false);
 
   useEffect(() => {
     verifyPremiumUser();
